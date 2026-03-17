@@ -8,3 +8,18 @@ wheels/
 
 # Virtual environments
 .venv
+
+#secrets
+killer_dbt_workspace\profiles.yml
+
+# DBT
+target/
+dbt_packages/
+logs/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
