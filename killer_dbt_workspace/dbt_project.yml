@@ -41,3 +41,8 @@ models:
     gold: 
       +materialized: table
       +schema: gold
+
+seeds:
+  killer_dbt_workspace:
+    +schema: bronze
+    
