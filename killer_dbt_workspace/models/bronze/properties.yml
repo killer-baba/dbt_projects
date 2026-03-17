@@ -4,6 +4,11 @@ models:
   - name: bronze_sales #  Must match the filename of a model -- including case sensitivity.
     config:
         materialized: view
+    columns:
+      - name: sales_id
+        data_tests:
+          - not_null
+          - unique
       
 
   - name: bronze_date
@@ -13,3 +18,12 @@ models:
   - name: bronze_store
     config:
         materialized: view
+    columns:
+      - name: store_name
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['MegaMart Manhattan', 'MegaMart Brooklyn', 'MegaMart Austin', 'MegaMart San Jose', 'MegaMart Toronto']
+              config:
+                severity: warn
+            

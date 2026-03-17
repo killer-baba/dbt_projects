@@ -9,8 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
-#secrets
-killer_dbt_workspace\profiles.yml
+# DBT secrets
+**/profiles.yml
+*.env
 
 # DBT
 target/
